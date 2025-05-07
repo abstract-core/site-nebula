@@ -1,0 +1,33 @@
+---
+import Layout from "nebula-atoms/Layout";
+import Navbar from "../components/Navbar.astro";
+import { SINCE, SITE_TITLE } from "../consts";
+import FooterSection from "../components/FooterSection.astro";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  data: CollectionEntry<"pages">["data"];
+}
+
+const {
+  data: { Name: title, Description: description, "Mots-clés": keywords },
+} = Astro.props;
+---
+
+<Layout
+  pageTitle={title}
+  siteTitle={SITE_TITLE}
+  description={description || undefined}
+  keywords={keywords || undefined}
+  since={SINCE}
+  footerIcon={{
+    src: "/favicon.svg",
+    alt: "Une spirale, représentant le processus de génération de site statique",
+  }}
+>
+  <Navbar slot="navbar" />
+  <div id="container">
+    <slot />
+  </div>
+  <FooterSection slot="footer" />
+</Layout>

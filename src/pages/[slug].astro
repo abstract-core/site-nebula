@@ -1,0 +1,35 @@
+---
+import { extendHtml } from "nebula-atoms/extendHtml";
+import { render } from "astro:content";
+import { getCollection } from "astro:content";
+import CustomLayout from "../layouts/CustomLayout.astro";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+  return Promise.all(
+    pages
+      .filter(({ data }) => data.Url?.slice(1) || data.Slug)
+      .map(async (page) => ({
+        params: {
+          slug: page.data.Url?.slice(1) || page.data.Slug,
+        },
+        props: {
+          page: {
+            ...page,
+            rendered: {
+              ...page.rendered,
+              html: extendHtml(page.rendered!.html),
+            },
+          },
+        },
+      }))
+  );
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+---
+
+<CustomLayout data={page.data}>
+  <Content />
+</CustomLayout>

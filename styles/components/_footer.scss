@@ -1,0 +1,42 @@
+footer {
+  background: var(--data);
+  margin-top: 5rem;
+  color: var(--deep);
+  a {
+    background: var(--deep);
+    color: var(--light);
+    padding: 0.2rem 0.8rem;
+    font-family: "pangaia";
+  }
+  > :first-child {
+    width: 262px;
+    ul {
+      list-style: none;
+      > li {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+  > :last-child {
+    width: 368px;
+    a {
+      font-size: 1.2rem;
+    }
+  }
+}
+#footer-icon {
+  width: 120px;
+}
+#footer-site-title {
+  font-family: "pangaia";
+  font-size: 4.5rem;
+  margin: 1.5rem 0;
+}
+#footer-since {
+  font-family: "pangaia";
+  font-size: 1.2rem;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "site-nebula",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "astro dev",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "dev:style": "npx sass styles/index.scss public/style.css --watch",
+    "style": "npx sass styles/index.scss public/style.css",
+    "dev:script": "npx esbuild scripts/index.ts --bundle --sourcemap --outfile=public/script.js --watch",
+    "script": "npx esbuild scripts/index.ts --bundle --minify --outfile=public/script.js"
+  },
+  "dependencies": {
+    "astro": "^5.1.1",
+    "nebula-atoms": "^2.2.4",
+    "nebula-genesis": "^2.0.6",
+    "sass": "^1.83.4"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.6"
+  }
+}
