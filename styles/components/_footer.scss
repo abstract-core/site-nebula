@@ -3,13 +3,14 @@ footer {
   margin-top: 5rem;
   color: var(--deep);
   a {
-    background: var(--deep);
-    color: var(--light);
-    padding: 0.2rem 0.8rem;
+    color: var(--deep);
     font-family: "pangaia";
   }
   > :first-child {
     width: 262px;
+    > ul {
+      padding-left: 0;
+    }
     ul {
       list-style: none;
       > li {
@@ -30,6 +31,7 @@ footer {
 }
 #footer-icon {
   width: 120px;
+  margin: 24px 124px;
 }
 #footer-site-title {
   font-family: "pangaia";

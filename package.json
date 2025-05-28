@@ -11,12 +11,16 @@
     "dev:style": "npx sass styles/index.scss public/style.css --watch",
     "style": "npx sass styles/index.scss public/style.css",
     "dev:script": "npx esbuild scripts/index.ts --bundle --sourcemap --outfile=public/script.js --watch",
-    "script": "npx esbuild scripts/index.ts --bundle --minify --outfile=public/script.js"
+    "script": "npx esbuild scripts/index.ts --bundle --minify --outfile=public/script.js",
+    "npm:dev:genesis": "npm uninstall nebula-genesis && npm i ../../nebula-genesis",
+    "npm:prod:genesis": "npm uninstall nebula-genesis && npm i nebula-genesis",
+    "npm:dev:atoms": "npm uninstall nebula-atoms && npm i ../../nebula-atoms",
+    "npm:prod:atoms": "npm uninstall nebula-atoms && npm i nebula-atoms"
   },
   "dependencies": {
     "astro": "^5.1.1",
-    "nebula-atoms": "^2.2.4",
-    "nebula-genesis": "^2.0.6",
+    "nebula-atoms": "file:../../nebula-atoms",
+    "nebula-genesis": "^2.0.9",
     "sass": "^1.83.4"
   },
   "devDependencies": {

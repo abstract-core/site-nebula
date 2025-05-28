@@ -29,7 +29,8 @@ body {
 
 #container {
   margin-top: 164px;
-  > p > a {
+  > p > a,
+  > ul a {
     color: var(--data);
     font-family: "pangaia";
     font-weight: bold;
@@ -70,7 +71,7 @@ h3 {
 }
 
 blockquote {
-  margin: 2rem 2rem;
+  margin: 2rem 1rem;
   background-color: var(--psank);
   color: var(--deep);
   border-radius: 8px;
@@ -90,6 +91,10 @@ blockquote {
 .btn,
 .btn-list a {
   @include button;
+}
+.btn-p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .btn-list {
