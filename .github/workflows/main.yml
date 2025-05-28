@@ -57,6 +57,9 @@ jobs:
             ON_OR_AFTER=${{ vars.ON_OR_AFTER_PAGES }} \
             FILTERS='[{ "property": "Contenu", "select": { "equals": "Pages" } }]'
 
+      - name: Build style
+        run: npm run style
+
       - name: Build script
         run: npm run script
 
