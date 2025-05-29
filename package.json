@@ -1,7 +1,7 @@
 {
   "name": "site-nebula",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "start": "astro dev",
     "dev": "astro dev",
