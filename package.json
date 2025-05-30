@@ -1,7 +1,7 @@
 {
   "name": "site-nebula",
   "type": "module",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "scripts": {
     "start": "astro dev",
     "dev": "astro dev",
@@ -20,7 +20,7 @@
   "dependencies": {
     "astro": "^5.1.1",
     "nebula-atoms": "^2.2.16",
-    "nebula-genesis": "^2.0.9",
+    "nebula-genesis": "^2.0.11",
     "sass": "^1.83.4"
   },
   "devDependencies": {
